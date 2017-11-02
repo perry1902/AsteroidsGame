@@ -1,25 +1,26 @@
 class Spaceship extends Floater  
 {
+	private int myX,myY,myrad,myColor;
+  	private double mYX, mYY;
 	public Spaceship()
 	{
-		corners = 6;
+		myColor=255;
+		myPointDirection=(int)(Math.random()*360);
+		myCenterX=Math.random()*400;
+		myCenterY=Math.random()*400;
+		corners = 4;
 		xCorners= new int[corners];
 		yCorners= new int[corners];
-		xCorners[0]=12;
+		xCorners[0]=16;
 		yCorners[0]=0;
-		xCorners[1]=-8;
-		yCorners[1]=8
+		xCorners[1]=-10;
+		yCorners[1]=10;
 		xCorners[2]=-6;
-		yCorners[2]=-2;
-		xCorners[3]=-7;
-		yCorners[3]=0;
-		xCorners[4]=-6;
-		yCorners[4]=-2;
-		xCorners[5]=-8;
-		yCorners[5]=-8;
-	}
-	private int myX,myY,myrad;
-  	private double mYX, mYY;
+		yCorners[2]=0;
+		xCorners[3]=-10;
+		yCorners[3]=-10;
+
+	} 
 	public void setX(int x)
 	{
 		myX=x;
@@ -44,7 +45,6 @@ class Spaceship extends Floater
 	{
 		return mYX;
 	}
-
 	public void setDirectionY(double y)
 	{
 		mYY=y;
