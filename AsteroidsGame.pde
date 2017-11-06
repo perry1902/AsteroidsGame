@@ -3,6 +3,7 @@ Stars [] night = new Stars[100];
 boolean aIsPressed=false;
 boolean dIsPressed=false;
 boolean wIsPressed=false;
+boolean fIsPressed=false;
 public void setup() 
 {
 	size(500,500);
@@ -30,7 +31,12 @@ public void draw()
 	}
 	if (wIsPressed==true)
 	{
-		ship.accelerate(0.18);
+		ship.accelerate(0.14);
+	}
+	if (fIsPressed==true)
+	{//is nnow working tho check varibles
+ 	ship.setX(0);
+	ship.setY(0);
 	}
 	
 }
@@ -51,8 +57,10 @@ public void keyPressed()
   }
    if (key=='f')
   {
-  	ship.setDirectionX(0);
-	ship.setDirectionY(0);
+  	//ship.setX(0);
+	//ship.setY(0);
+	//ship.accelerate((double)0.0);
+	fIsPressed=true;
 
   }
 }
@@ -69,6 +77,10 @@ public void keyReleased()
   if (key=='w')
   {
   	wIsPressed=false;
+  }
+  if (key=='f')
+  {
+  	fIsPressed=false;
   }
 
 }
