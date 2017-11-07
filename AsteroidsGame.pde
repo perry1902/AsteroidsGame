@@ -4,6 +4,8 @@ boolean aIsPressed=false;
 boolean dIsPressed=false;
 boolean wIsPressed=false;
 boolean fIsPressed=false;
+int randX;
+int randY;
 public void setup() 
 {
 	size(500,500);
@@ -14,6 +16,8 @@ public void setup()
 }
 public void draw()
 {
+	randX=(int)(Math.random()*500);
+	randY=(int)(Math.random()*500);
 	background(255);
 	for (int i=0; i<night.length; i++)
 	{
@@ -33,12 +37,7 @@ public void draw()
 	{
 		ship.accelerate(0.14);
 	}
-	if (fIsPressed==true)
-	{//is nnow working tho check varibles
- 	ship.setX(0);
-	ship.setY(0);
-	}
-	
+
 }
 
 public void keyPressed()
@@ -57,11 +56,11 @@ public void keyPressed()
   }
    if (key=='f')
   {
-  	//ship.setX(0);
-	//ship.setY(0);
-	//ship.accelerate((double)0.0);
-	fIsPressed=true;
-
+  	ship.setX(randX);
+	ship.setY(randY);
+	ship.setDirectionX(0);
+	ship.setDirectionY(0);
+	ship.setPointDirection(randX);
   }
 }
 public void keyReleased()

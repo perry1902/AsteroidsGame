@@ -4,6 +4,7 @@ class Spaceship extends Floater
   	private double mYX, mYY;
 	public Spaceship()
 	{
+	fill(super(myColor));
 	// need help for spacechip color
 		myColor=color(150, 159, 155);
 		myPointDirection=(int)(Math.random()*360);
@@ -40,7 +41,7 @@ class Spaceship extends Floater
 	}
 	public void setDirectionX(double x)
 	{
-		mYX=x;
+		 myDirectionX=x;
 	}
 	public double getDirectionX()
 	{
@@ -48,7 +49,7 @@ class Spaceship extends Floater
 	}
 	public void setDirectionY(double y)
 	{
-		mYY=y;
+		myDirectionY=y;
 	}
 	public double getDirectionY()
 	{
@@ -56,7 +57,7 @@ class Spaceship extends Floater
 	}
 	public void setPointDirection(int degrees)
 	{
-		myrad= degrees;
+		myPointDirection= degrees;
 	}
     public double getPointDirection()
     {
