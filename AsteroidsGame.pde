@@ -1,5 +1,5 @@
 Spaceship ship= new Spaceship();
-Stars [] night = new Stars[100];
+Stars [] night = new Stars[150];
 boolean aIsPressed=false;
 boolean dIsPressed=false;
 boolean wIsPressed=false;
@@ -18,10 +18,10 @@ public void draw()
 {
 	randX=(int)(Math.random()*500);
 	randY=(int)(Math.random()*500);
-	background(255);
+	background(0);
 	for (int i=0; i<night.length; i++)
 	{
-	//	night[i].show();
+		night[i].show();
 	}
 	ship.show();
 	ship.move();

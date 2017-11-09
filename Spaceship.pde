@@ -1,12 +1,12 @@
 class Spaceship extends Floater  
 {
-	private int myX,myY,myrad,myColor;
+	private int myX,myY,myrad;
   	private double mYX, mYY;
 	public Spaceship()
 	{
-	fill(super(myColor));
+
 	// need help for spacechip color
-		myColor=color(150, 159, 155);
+		myColor=255;
 		myPointDirection=(int)(Math.random()*360);
 		myCenterX=Math.random()*400;
 		myCenterY=Math.random()*400;
