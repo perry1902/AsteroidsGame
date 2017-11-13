@@ -1,4 +1,5 @@
 Spaceship ship= new Spaceship();
+Asteroids rock= new Asteroids();
 Stars [] night = new Stars[150];
 boolean aIsPressed=false;
 boolean dIsPressed=false;
@@ -37,6 +38,7 @@ public void draw()
 	{
 		ship.accelerate(0.14);
 	}
+	rock.show();
 
 }
 
