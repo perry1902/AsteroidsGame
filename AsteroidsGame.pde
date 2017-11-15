@@ -1,5 +1,5 @@
 Spaceship ship= new Spaceship();
-Asteroids rock= new Asteroids();
+Asteroids[] rock= new Asteroids[10];
 Stars [] night = new Stars[180];
 boolean aIsPressed=false;
 boolean dIsPressed=false;
@@ -14,6 +14,10 @@ public void setup()
 	{
 		night[i]=new Stars();
 	}
+	for (int r=0; r<rock.length;r++)
+	{
+		rock[r]= new Asteroids();
+	}
 }
 public void draw()
 {
@@ -23,6 +27,12 @@ public void draw()
 	for (int i=0; i<night.length; i++)
 	{
 		night[i].show();
+	}
+	for (int r=0; r<rock.length; r++)
+	{
+		rock[r].show();
+		rock[r].move();
+
 	}
 	ship.show();
 	ship.move();
@@ -36,10 +46,9 @@ public void draw()
 	}
 	if (wIsPressed==true)
 	{
-		ship.accelerate(0.14);
+		ship.accelerate(0.12);
 	}
-	rock.show();
-	rock.move();
+
 
 }
 
