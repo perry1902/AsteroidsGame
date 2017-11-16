@@ -1,5 +1,5 @@
 Spaceship ship= new Spaceship();
-Asteroids[] rock= new Asteroids[10];
+Asteroids[] rock= new Asteroids[15];
 Stars [] night = new Stars[180];
 boolean aIsPressed=false;
 boolean dIsPressed=false;
