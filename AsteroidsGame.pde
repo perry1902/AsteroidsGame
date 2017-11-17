@@ -4,7 +4,6 @@ Stars [] night = new Stars[180];
 boolean aIsPressed=false;
 boolean dIsPressed=false;
 boolean wIsPressed=false;
-boolean fIsPressed=false;
 
 public void setup() 
 {
@@ -85,10 +84,6 @@ public void keyReleased()
   if (key=='w')
   {
   	wIsPressed=false;
-  }
-  if (key=='f')
-  {
-  	fIsPressed=false;
   }
 }
 
