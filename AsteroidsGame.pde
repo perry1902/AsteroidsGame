@@ -5,8 +5,7 @@ boolean aIsPressed=false;
 boolean dIsPressed=false;
 boolean wIsPressed=false;
 boolean fIsPressed=false;
-int randX;
-int randY;
+
 public void setup() 
 {
 	size(700,600);
@@ -21,8 +20,6 @@ public void setup()
 }
 public void draw()
 {
-	randX=(int)(Math.random()*500);
-	randY=(int)(Math.random()*500);
 	background(0);
 	for (int i=0; i<night.length; i++)
 	{
@@ -68,11 +65,11 @@ public void keyPressed()
   }
    if (key=='f')
   {
-  	ship.setX(randX);
-	ship.setY(randY);
+  	ship.setX((int)(Math.random()*700));
+	ship.setY((int)(Math.random()*600));
 	ship.setDirectionX(0);
 	ship.setDirectionY(0);
-	ship.setPointDirection(randX);
+	ship.setPointDirection((int)(Math.random()*360));
   }
 }
 public void keyReleased()
