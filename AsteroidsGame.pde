@@ -1,10 +1,9 @@
 Spaceship ship= new Spaceship();
-Asteroids[] rock= new Asteroids[15];
+ArrayList <Asteroids> rock = new ArrayList <Asteroids>();
 Stars [] night = new Stars[180];
 boolean aIsPressed=false;
 boolean dIsPressed=false;
 boolean wIsPressed=false;
-
 public void setup() 
 {
 	size(700,600);
@@ -12,10 +11,16 @@ public void setup()
 	{
 		night[i]=new Stars();
 	}
-	for (int r=0; r<rock.length;r++)
+	for (int r=0; r<15 ;r++)
 	{
-		rock[r]= new Asteroids();
+		rock.add(new Asteroids());
+	}	
+	for (int i=0; i<rock.size(); i++)
+	{
+		rock.get(i).show();
+		rock.get(i).move();
 	}
+
 }
 public void draw()
 {
@@ -24,10 +29,12 @@ public void draw()
 	{
 		night[i].show();
 	}
-	for (int r=0; r<rock.length; r++)
+
+	for (int i= 0; i<rock.size(); i++)
 	{
-		rock[r].show();
-		rock[r].move();
+		float d = dist(ship.getX(), ship.getY(), rock.get(i).getX(), rock.get(i).getY());
+		if (d<20)
+			rock.remove(i);
 
 	}
 	ship.show();
