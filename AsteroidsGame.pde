@@ -11,15 +11,11 @@ public void setup()
 	{
 		night[i]=new Stars();
 	}
-	for (int r=0; r<15 ;r++)
+	for (int r=0; r<1 ;r++)
 	{
 		rock.add(new Asteroids());
 	}	
-	for (int i=0; i<rock.size(); i++)
-	{
-		rock.get(i).show();
-		rock.get(i).move();
-	}
+	
 
 }
 public void draw()
@@ -29,13 +25,19 @@ public void draw()
 	{
 		night[i].show();
 	}
-
+for (int i=0; i<rock.size(); i++)
+	{
+		rock.get(i).show();
+		rock.get(i).move();
+	}
 	for (int i= 0; i<rock.size(); i++)
 	{
 		float d = dist(ship.getX(), ship.getY(), rock.get(i).getX(), rock.get(i).getY());
-		if (d<20)
-			rock.remove(i);
+//System.out.println(rock.get(i).getY());
+//System.out.println(ship.getX());
 
+		//if (d<20)
+			//rock.remove(i);
 	}
 	ship.show();
 	ship.move();

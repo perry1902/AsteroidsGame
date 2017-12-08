@@ -27,22 +27,23 @@ class Asteroids extends Floater
 		yCorners[4]=8; 
 		xCorners[5]=-10;
 		yCorners[5]=0; 
-	}
-	public int getX()
-	{
-		return myX;
+		System.out.println(myCenterX);
 	}
 	public void setX(int x)
 	{
-		myCenterX=x;
+		myX=x;
 	} 
-	public int getY()
+		public int getX()
 	{
-		return myY;
+		return myX;
 	}
 	public void setY(int y)
 	{
 		myCenterY=y;
+	}
+	public int getY()
+	{
+		return myY;
 	}
 	public void setDirectionX(double x)
 	{

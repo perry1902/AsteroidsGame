@@ -20,6 +20,7 @@ class Spaceship extends Floater
 		xCorners[3]=-10;
 		yCorners[3]=-10;
 
+//fixz
 	} 
 	public void setX(int x)
 	{
@@ -31,7 +32,7 @@ class Spaceship extends Floater
 	}
 	public void setY(int y)
 	{
-		myCenterY=y;
+		myCenterY=myY;
 	}
 	public int getY()
 	{
