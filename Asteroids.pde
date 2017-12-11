@@ -1,8 +1,6 @@
 class Asteroids extends Floater
 {	
-	private int myX,myY,rotsp;
-  	private double mYX, mYY, myrad;
-
+	int rotsp;
 	public Asteroids()
 	{
 		myColor=120;
@@ -31,11 +29,11 @@ class Asteroids extends Floater
 	}
 	public void setX(int x)
 	{
-		myX=x;
+		myCenterX=x;
 	} 
 		public int getX()
 	{
-		return myX;
+		return (int)myCenterX;
 	}
 	public void setY(int y)
 	{
@@ -43,36 +41,36 @@ class Asteroids extends Floater
 	}
 	public int getY()
 	{
-		return myY;
+		return (int)myCenterY;
 	}
 	public void setDirectionX(double x)
 	{
-		myDirectionX=mYX;
+		myDirectionX=x;
 	}
 	public double getDirectionX()
 	{
-		return mYX;
+		return myDirectionX;
 	}
 	public void setDirectionY(double y)
 	{
-		myDirectionY=myY;
+		myDirectionY=y;
 	}
 	public double getDirectionY()
 	{
-		return mYY;
+		return myDirectionY;
 	}
 	public void setPointDirection(int degrees)
 	{
-		myrad=degrees;
+		myPointDirection=degrees;
 	}
 	public double getPointDirection()
 	{
-		return myrad;
+		return myPointDirection;
 	}
 	public void move()
 	{
 		turn(rotsp);
  		super.move();
 
-	}// fix turn
+	}
 }

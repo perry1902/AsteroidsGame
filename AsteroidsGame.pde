@@ -11,7 +11,7 @@ public void setup()
 	{
 		night[i]=new Stars();
 	}
-	for (int r=0; r<1 ;r++)
+	for (int r=0; r<15 ;r++)
 	{
 		rock.add(new Asteroids());
 	}	
@@ -33,21 +33,20 @@ for (int i=0; i<rock.size(); i++)
 	for (int i= 0; i<rock.size(); i++)
 	{
 		float d = dist(ship.getX(), ship.getY(), rock.get(i).getX(), rock.get(i).getY());
-//System.out.println(rock.get(i).getY());
-//System.out.println(ship.getX());
 
-		//if (d<20)
-			//rock.remove(i);
+
+		if (d<20)
+			rock.remove(i);
 	}
 	ship.show();
 	ship.move();
 	if (aIsPressed==true)
 	{
-		ship.turn(-5);
+		ship.turn(-4);
 	}
 	else if (dIsPressed==true)
 	{
-		ship.turn(5);
+		ship.turn(4);
 	}
 	if (wIsPressed==true)
 	{
