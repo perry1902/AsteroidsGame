@@ -1,8 +1,8 @@
-class Bullet extends Floater
+/*class Bullet extends Floater
 {
 	public Bullet(Spaceship ship)
 	{
-		
+
 	}
 	public void show();
 	{
@@ -10,3 +10,4 @@ class Bullet extends Floater
 		super.show();
 	}
 }
+*/

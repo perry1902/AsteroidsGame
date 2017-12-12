@@ -1,7 +1,7 @@
 Spaceship ship= new Spaceship();
 ArrayList <Asteroids> rock = new ArrayList <Asteroids>();
 Stars [] night = new Stars[180];
-Bullet pew = new Bullet(ship);
+//Bullet pew = new Bullet(ship);
 boolean aIsPressed=false;
 boolean dIsPressed=false;
 boolean wIsPressed=false;
@@ -51,7 +51,7 @@ for (int i=0; i<rock.size(); i++)
 	{
 		ship.accelerate(0.12);
 	}
-	pew.show();
+	//pew.show();
 
 
 }
