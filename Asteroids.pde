@@ -25,7 +25,6 @@ class Asteroids extends Floater
 		yCorners[4]=8; 
 		xCorners[5]=-10;
 		yCorners[5]=0; 
-		System.out.println(myCenterX);
 	}
 	public void setX(int x)
 	{
