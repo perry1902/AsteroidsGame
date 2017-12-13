@@ -1,7 +1,7 @@
 Spaceship ship= new Spaceship();
 ArrayList <Asteroids> rock = new ArrayList <Asteroids>();
-Stars [] night = new Stars[180];
-//Bullet pew = new Bullet(ship);
+Stars [] night = new Stars[150];
+Bullet pew = new Bullet(ship);
 boolean aIsPressed=false;
 boolean dIsPressed=false;
 boolean wIsPressed=false;
@@ -34,7 +34,7 @@ for (int i=0; i<rock.size(); i++)
 	for (int i= 0; i<rock.size(); i++)
 	{
 		float d = dist(ship.getX(), ship.getY(), rock.get(i).getX(), rock.get(i).getY());
-		if (d<20)
+		if (d<17)
 			rock.remove(i);
 	}
 	ship.show();
