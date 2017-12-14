@@ -51,7 +51,7 @@ for (int i=0; i<rock.size(); i++)
 	{
 		ship.accelerate(0.12);
 	}
-	//pew.show();
+	pew.show();
 
 
 }
