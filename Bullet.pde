@@ -5,8 +5,8 @@ class Bullet extends Floater
 		myCenterX=Math.random()*650;
 		myCenterY=Math.random()*600;
 		myPointDirection=(int)(Math.random()*360);
-		myDirectionX=5*Math.cos() + ship.getDirectionX;
-		myDirectionY=5*Math.sin() + ship.getDirectionY;
+		//myDirectionX=5*Math.cos() + ship.getDirectionX;
+		//myDirectionY=5*Math.sin() + ship.getDirectionY;
 	}
 	public void setX(int x)
 	{
