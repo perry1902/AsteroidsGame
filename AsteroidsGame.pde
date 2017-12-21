@@ -48,6 +48,7 @@ for (int i = 0; i < pew.size(); i++)
           pew.remove(j);
           i--;
           j--;
+          break;
           }
        }
     }
